@@ -24,63 +24,97 @@
   <main class="legal-content">
     <div class="container-narrow">
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last updated: January 2025</p>
+      <p class="last-updated">Last updated: January 2026</p>
 
-      <p>This Privacy Policy describes how Drip ("we", "us", or "our") collects, uses, and shares information about you when you use our mobile application ("App").</p>
+      <h2>Introduction</h2>
+      <p>Drip ("we", "our", "the app") is a weather application developed by an independent developer based in France. This privacy policy explains how we collect, use, and protect your data.</p>
 
-      <h2>Information We Collect</h2>
+      <h2>Data We Collect</h2>
 
-      <h3>Location Data</h3>
-      <p>Drip requires access to your device's location to provide accurate weather information for your current position. We use your location data solely to:</p>
+      <h3>Location</h3>
       <ul>
-        <li>Fetch weather forecasts from Apple WeatherKit</li>
-        <li>Display your current city and neighborhood</li>
-      </ul>
-      <p>Your location data is processed locally on your device and is not stored on our servers.</p>
-
-      <h3>Weather Data</h3>
-      <p>We use Apple WeatherKit to retrieve weather information. Weather requests are made directly to Apple's servers. Please refer to <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a> for information on how Apple handles this data.</p>
-
-      <h3>Analytics</h3>
-      <p>We may collect anonymous usage analytics to improve the App. This data does not personally identify you and may include:</p>
-      <ul>
-        <li>App crashes and error reports</li>
-        <li>Feature usage statistics</li>
-        <li>Device type and iOS version</li>
+        <li><strong>What:</strong> Your GPS position is used to display local weather</li>
+        <li><strong>Storage:</strong> Your location stays on your device only</li>
+        <li><strong>Sharing:</strong> Sent to Apple WeatherKit to fetch weather data</li>
+        <li><strong>We do not store</strong> your location on our servers</li>
       </ul>
 
-      <h2>How We Use Your Information</h2>
-      <p>We use the information we collect to:</p>
+      <h3>Push Notifications</h3>
       <ul>
-        <li>Provide and maintain the App's functionality</li>
-        <li>Deliver accurate weather forecasts based on your location</li>
-        <li>Improve and optimize the App</li>
-        <li>Respond to your requests or questions</li>
+        <li><strong>Service used:</strong> Firebase Cloud Messaging (Google)</li>
+        <li><strong>Purpose:</strong> Alert you before weather changes</li>
+        <li><strong>Data:</strong> An anonymous device identifier (token)</li>
+        <li><strong>You can</strong> disable notifications in settings</li>
+      </ul>
+
+      <h3>In-App Purchases</h3>
+      <ul>
+        <li><strong>Managed by:</strong> Apple via the App Store</li>
+        <li><strong>We never have access</strong> to your payment information</li>
+        <li><strong>Apple handles:</strong> payments, refunds, renewals</li>
+      </ul>
+
+      <h2>Data We Do NOT Collect</h2>
+      <p>We do NOT collect:</p>
+      <ul>
+        <li>Name, email, or personal information</li>
+        <li>User accounts</li>
+        <li>Browsing history</li>
+        <li>Analytics or tracking data</li>
+        <li>Payment information</li>
       </ul>
 
       <h2>Data Sharing</h2>
-      <p>We do not sell, trade, or rent your personal information to third parties. We may share anonymous, aggregated data for analytical purposes.</p>
+      <p>Your data is only shared with:</p>
+      <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <th style="text-align: left; padding: 12px 0; color: var(--text-secondary);">Service</th>
+            <th style="text-align: left; padding: 12px 0; color: var(--text-secondary);">Data</th>
+            <th style="text-align: left; padding: 12px 0; color: var(--text-secondary);">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border-subtle);">
+            <td style="padding: 12px 0;">Apple WeatherKit</td>
+            <td style="padding: 12px 0;">GPS location</td>
+            <td style="padding: 12px 0;">Fetch weather data</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 0;">Firebase (Google)</td>
+            <td style="padding: 12px 0;">Device token</td>
+            <td style="padding: 12px 0;">Push notifications</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>We never sell your data.</strong></p>
 
-      <h2>Data Storage and Security</h2>
-      <p>Drip processes most data locally on your device. We implement appropriate security measures to protect any data that is transmitted or stored.</p>
-
-      <h2>Your Rights</h2>
-      <p>You can:</p>
+      <h2>Security</h2>
       <ul>
-        <li>Disable location access in your device settings at any time</li>
-        <li>Delete the App to remove all locally stored data</li>
-        <li>Contact us to request information about your data</li>
+        <li>All communications are encrypted (HTTPS)</li>
+        <li>Data primarily stays on your device</li>
+        <li>No user database on our servers</li>
       </ul>
 
-      <h2>Children's Privacy</h2>
-      <p>Drip is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
+      <h2>Your Rights</h2>
+      <p>Under GDPR, you can:</p>
+      <ul>
+        <li><strong>Access</strong> your data</li>
+        <li><strong>Delete</strong> your data (uninstall the app)</li>
+        <li><strong>Disable</strong> location or notifications in iOS settings</li>
+      </ul>
 
-      <h2>Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
+      <h2>Children</h2>
+      <p>The app is intended for users aged 13 and older. We do not knowingly collect data from children.</p>
 
-      <h2>Contact Us</h2>
-      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <h2>Changes</h2>
+      <p>We may update this policy. The last updated date will be changed accordingly.</p>
+
+      <h2>Contact</h2>
+      <p>For any questions about your data:</p>
       <p><a href="mailto:contact@tblabs.dev">contact@tblabs.dev</a></p>
+
+      <p style="margin-top: 48px; color: var(--text-tertiary); font-style: italic;">Drip is developed by an independent developer based in France.</p>
 
       <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-subtle);">
         <a href="/apps/drip" style="color: var(--text-secondary); text-decoration: none;">&larr; Back to Drip</a>
