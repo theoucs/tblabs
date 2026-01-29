@@ -67,7 +67,16 @@
       box-shadow:
         0 50px 100px -20px rgba(0, 0, 0, 0.5),
         0 0 0 1px rgba(255, 255, 255, 0.1),
-        0 0 80px rgba(139, 92, 246, 0.2);
+        0 0 80px rgba(139, 92, 246, 0.3);
+      animation: float 6s ease-in-out infinite, glow 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 60px rgba(139, 92, 246, 0.3); }
+      50% { box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 120px rgba(139, 92, 246, 0.5); }
     }
     .phone-frame img {
       width: 100%;
@@ -85,6 +94,16 @@
     .feature {
       text-align: center;
       padding: 32px 24px;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
+    }
+    .feature:hover {
+      background: rgba(139, 92, 246, 0.08);
+      border-color: rgba(139, 92, 246, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
     }
     .feature-icon {
       width: 48px;
@@ -96,11 +115,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .feature:hover .feature-icon {
+      background: rgba(139, 92, 246, 0.2);
+      border-color: rgba(139, 92, 246, 0.4);
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
     }
     .feature h3 {
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 8px;
+      transition: color 0.3s ease;
+    }
+    .feature:hover h3 {
+      color: #a78bfa;
     }
     .feature p {
       color: var(--text-secondary);
