@@ -460,6 +460,7 @@ footer a:hover {
   .app-card {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .section {
