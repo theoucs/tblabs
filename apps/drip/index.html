@@ -67,17 +67,11 @@
       background: #000;
       box-shadow:
         0 50px 100px -20px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(255, 255, 255, 0.1),
-        0 0 80px rgba(139, 92, 246, 0.3);
-      animation: glow 4s ease-in-out infinite;
+        0 0 0 1px rgba(255, 255, 255, 0.1);
       transition: transform 0.3s ease;
     }
     .phone-frame:hover {
       transform: scale(1.03);
-    }
-    @keyframes glow {
-      0%, 100% { box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 60px rgba(139, 92, 246, 0.3); }
-      50% { box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.15), 0 0 120px rgba(139, 92, 246, 0.5); }
     }
     .phone-frame img {
       width: 100%;
