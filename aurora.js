@@ -6,6 +6,9 @@
   const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
   if (!gl) return;
 
+  // Read intensity from data attribute (default 1.0)
+  const intensity = parseFloat(canvas.dataset.intensity) || 1.0;
+
   const vertexShaderSource = `
     attribute vec2 a_position;
     void main() {
@@ -18,6 +21,7 @@
 
     uniform vec2 u_resolution;
     uniform float u_time;
+    uniform float u_intensity;
 
     vec4 permute(vec4 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
     vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
@@ -152,7 +156,7 @@
 
       float vignette = smoothstep(0.2, 1.0, length(centeredUv * 0.6));
       finalColor *= mix(0.4, 1.0, vignette);
-      finalColor *= 0.7;
+      finalColor *= 0.7 * u_intensity;
 
       gl_FragColor = vec4(finalColor, 1.0);
     }
@@ -180,6 +184,7 @@
   const positionLocation = gl.getAttribLocation(program, 'a_position');
   const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
   const timeLocation = gl.getUniformLocation(program, 'u_time');
+  const intensityLocation = gl.getUniformLocation(program, 'u_intensity');
 
   const positionBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
@@ -211,6 +216,7 @@
     gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
     gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
     gl.uniform1f(timeLocation, time);
+    gl.uniform1f(intensityLocation, intensity);
     gl.drawArrays(gl.TRIANGLES, 0, 6);
     requestAnimationFrame(render);
   }
